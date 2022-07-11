@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <title>Sub-Categorias - IVM </title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/pt/e/ed/IST_Logo.png">
+    <body style>
+        <style>
+            body {
+                background-image: url('https://i.pinimg.com/originals/4c/98/e7/4c98e7f47489648bfd0ee745c8c79948.gif');
+                background-position: centre;
+                background-size: cover;
+                font-size: 180%;
+            }
+            h1 {
+                font-family: Monospace;
+                color: white;
+                text-align: center;
+                -webkit-text-stroke: 1px rgba(0, 0, 0, 0.61);
+            }
+            #menu {
+                font-family: Monospace;
+                border-collapse: collapse;
+                background-color: rgb(255, 255, 255);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                font-size: 120%;
+            }
+            button {
+                font-family: Monospace;
+                border-collapse: collapse;
+                font-size: 120%;
+                padding: 12px;
+                text-align: center;
+                background-color: rgba(92, 215, 252, 0.831);
+                color: white;
+                border: 1px solid rgba(0, 0, 0, 0.61);
+
+            }
+            button:hover{
+                background-color: #044255;
+            }
+            #tabela{
+                text-align: center;
+                padding: 12px;
+            }
+            #menu td, #menu th {
+                text-align: center;
+                border: 1px solid #ddd;
+                padding: 12px;
+            }
+
+            #menu tr:nth-child(even){
+                background-color: #ffffff;
+            }
+
+            #menu tr:hover {
+                background-color: #ddd;
+            }
+
+            #menu th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: rgba(92, 215, 252, 0.831);
+                color: white;
+            }
+        </style>
+
+        <h1>Sub-Categorias</h1>
+
+        <div id="tabela">
+            <button onclick="window.location.href='../../menu'">Menu</button>
+            <button onclick="window.location.href='../super'">Super Categorias</button>
+        {% if cursor %}
+            <table id="menu">
+                <thead>
+                    <tr>
+                        <th> Nome </th>
+                    </tr>
+                </thead>
+        {% for record in cursor %}
+                <tr>
+                    <td> {{ record[0] }} </td>
+                </tr>
+        {% endfor %}
+            </table>
+        </div>
+        {% else %}
+        <p> Erro: não foi possível obter dados da base de dados! </p>
+        {% endif %}
+    </body>
+</html>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>

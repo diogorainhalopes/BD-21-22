@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <title>Inserir Categoria Super - IVM </title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/pt/e/ed/IST_Logo.png">
+    <body style="font-family: Monospace">
+        <style>
+            body {
+                background-image: url('https://i.pinimg.com/originals/4c/98/e7/4c98e7f47489648bfd0ee745c8c79948.gif');
+                background-position: centre;
+                background-size: cover;
+                font-size: 180%;
+            }
+            h1 {
+                font-family: Monospace;
+                color: white;
+                text-align: center;
+                -webkit-text-stroke: 1px rgba(0, 0, 0, 0.61);
+            }
+
+            input[type=text],input[type=date], select {
+                font-family: Monospace;
+                width: 20%;
+                padding: 12px;
+                text-align: center;
+                border: 1px solid rgb(0, 0, 0);
+                text-align: center;
+                box-sizing: content-box;
+            }
+
+            input[type=submit] {
+                font-family: Monospace;
+                width: 10%;
+                border: 0px rgb(255, 255, 255);
+                background-color:  #24afe7;
+                color: white;
+                padding: 12px;
+                text-align: center;
+                cursor: pointer;
+            }
+            label {
+                font-family: Monospace;
+                color: white;
+                text-align: center;
+                -webkit-text-stroke: 1px rgba(0, 0, 0, 0.61);
+                font-size: 120%;
+            }
+
+            input[type=submit]:hover {
+                background-color: #166b8d;
+            }
+            div {
+                text-align: center;
+            }
+
+        </style>
+        <div>
+            <h1>Por favor insira o nome da super categoria</h1>
+            <form action="execute_insert" method="post">
+                <label> Nome </label>
+                <input type="text" name="nome"/>
+                <input type="submit" value="Inserir"/>
+            </form>
+        </div>
+    </body>
+</html >

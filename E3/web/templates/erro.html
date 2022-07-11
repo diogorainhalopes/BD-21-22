@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <title>Erro</title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/pt/e/ed/IST_Logo.png">
+    <body style>
+        <style>
+            body {
+                background-image: url('https://i.pinimg.com/originals/4c/98/e7/4c98e7f47489648bfd0ee745c8c79948.gif');
+                background-position: centre;
+                background-size: cover;
+                font-size: 180%;
+            }
+            h1 {
+                font-family: Monospace;
+                color: white;
+                text-align: center;
+                -webkit-text-stroke: 1px rgba(0, 0, 0, 0.61);
+            }
+            button {
+                font-family: Monospace;
+                border-collapse: collapse;
+                font-size: 120%;
+                padding: 12px;
+                text-align: center;
+                background-color: rgba(92, 215, 252, 0.831);
+                color: white;
+                border: 1px solid rgba(0, 0, 0, 0.61);
+            }
+            button:hover{
+                background-color: #79d1ec;
+            }
+            #tabela{
+                text-align: center;
+            }
+            #menu {
+                font-family: Monospace;
+                border-collapse: collapse;
+                background-color: whitesmoke;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 120%;
+            }
+
+            #menu td, #menu th {
+                border: 1px solid rgba(0, 0, 0, 0.61);
+                padding: 12px;
+            }
+
+            #menu tr:nth-child(even){background-color: #f2f2f2;}
+
+            #menu tr:hover {background-color: #ddd;}
+
+            #menu th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgba(92, 214, 252, 0.705);
+            color: white;
+            }
+        </style>
+        <h1>A operação falhou</h1>
+
+        <div id="tabela">
+            <button onclick="window.location.href='menu'">Menu IVM</button>
+
+        </div>
+
+    </body>
+</html>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
